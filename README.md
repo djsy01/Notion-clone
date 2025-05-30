@@ -7,7 +7,7 @@
 
 ## 프로젝트 폴더 구조
 
-<img src="./Images/Directory.png" alt="Directory">
+![디렉토리 구조](./Images/Directory.png)
 
 ---
 
