@@ -2,8 +2,8 @@ const express = require('express');
 const router = express.Router();
 
 // 각각의 기능 모듈로 분리
-const registerHandler = require('./register');
-const loginHandler = require('./login');
+const registerHandler = require('../controllers/register');
+const loginHandler = require('../controllers/login');
 
 // POST /auth/register
 router.post('/register', registerHandler);
