@@ -1,0 +1,55 @@
+/* src/components/AuthForm.css */
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.form-group label {
+  margin-bottom: 6px;
+  font-weight: 500;
+  color: #333;
+}
+
+.form-group input {
+  padding: 10px 12px;
+  font-size: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  outline: none;
+  transition: border 0.2s ease;
+}
+
+.form-group input:focus {
+  border-color: #4a8fff;
+  box-shadow: 0 0 0 3px rgba(74, 143, 255, 0.2);
+}
+
+.error-message {
+  color: red;
+  font-size: 14px;
+  text-align: left;
+  margin-top: -8px;
+}
+
+.submit-button {
+  padding: 12px;
+  background-color: #4a8fff;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.submit-button:hover {
+  background-color: #357ae8;
+}

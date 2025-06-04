@@ -1,4 +1,5 @@
 // db.js 예시 (Node.js mysql2)
+require('dotenv').config();
 const mysql = require('mysql2/promise');
 
 const pool = mysql.createPool({

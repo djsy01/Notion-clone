@@ -8,7 +8,7 @@ Express를 기반으로 한 노션 클론 백엔드 서버의 초기 구조를 �
 ## 🔧 사용 기술
 
 - Node.js@20.17.0
-- Express
+- Express@5.1.0
 - MySQL@9.3.0 (mysql2 라이브러리 사용)
 - JWT (jsonwebtoken 라이브러리 사용)
 

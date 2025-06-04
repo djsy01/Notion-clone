@@ -11,4 +11,4 @@ router.post('/register', registerHandler);
 // POST /auth/login
 router.post('/login', loginHandler);
 
-module.exports = router;
+module.exports = routers

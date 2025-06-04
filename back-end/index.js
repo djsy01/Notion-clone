@@ -3,7 +3,7 @@ const cors = require('cors');
 const bodyParser = require('body-parser');
 
 const authRoutes = require('./routes/auth');  // auth 라우터 import
-const noteRoutes = require('./routes/note');  // note 라우터 import
+const noteRoutes = require('./routes/notes');  // notes 라우터 import
 
 const app = express();
 const PORT = 4000;
