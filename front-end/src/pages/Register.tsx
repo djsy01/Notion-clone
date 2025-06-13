@@ -7,9 +7,9 @@ import './Register.css'; // 스타일 파일 추가
 const Signup: React.FC = () => {
   const navigate = useNavigate();
 
-  const handleSignup = async (username: string, password: string) => {
+  const handleSignup = async (username: string, email: string, nickname: string, password: string) => {
     try {
-      await signup(username, password);
+      await signup(username, email, nickname, password);
       alert('회원가입 성공! 로그인 페이지로 이동합니다.');
       navigate('/login');
     } catch (error) {

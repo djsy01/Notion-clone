@@ -1,3 +1,4 @@
+// src/components/Layout.tsx
 import React, { useState, useRef, useEffect } from "react";
 import Header from "./Header";
 import "./Layout.css";
@@ -14,22 +15,13 @@ interface Workspace {
   pages: Page[];
 }
 
-const initialWorkspaces: Workspace[] = [
-  {
-    id: "1",
-    name: "개인 워크스페이스",
-    type: "personal",
-    pages: [{ id: "p1", title: "첫 페이지" }],
-  },
-  {
-    id: "2",
-    name: "팀 워크스페이스",
-    type: "team",
-    pages: [{ id: "p2", title: "팀 첫 페이지" }],
-  },
-];
+interface LayoutProps {
+  onLogout: () => void;
+}
 
-export default function Layout() {
+const initialWorkspaces: Workspace[] = [];
+
+export default function Layout({ onLogout }: LayoutProps) {
   const [workspaces, setWorkspaces] = useState<Workspace[]>(initialWorkspaces);
   const [selectedWorkspaceId, setSelectedWorkspaceId] = useState<string>(
     initialWorkspaces[0]?.id || ""
@@ -86,7 +78,6 @@ export default function Layout() {
       setSelectedWorkspaceId(filtered[0].id);
       setSelectedPageId(filtered[0].pages[0]?.id || "");
     } else {
-      // 워크스페이스가 없을 때는 빈 문자열로 초기화
       setSelectedWorkspaceId("");
       setSelectedPageId("");
     }
@@ -102,6 +93,12 @@ export default function Layout() {
   return (
     <div className="layout">
       <Header />
+      <div style={{ textAlign: "right", padding: "10px" }}>
+        <button onClick={onLogout} style={{ cursor: "pointer" }}>
+          로그아웃
+        </button>
+      </div>
+
       <div className="layout-content">
         <aside className="sidebar">
           <div className="workspace-list">

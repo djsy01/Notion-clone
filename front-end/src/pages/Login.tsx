@@ -28,8 +28,8 @@ const Login: React.FC<LoginProps> = ({ onLogin }) => {
       if (data.token) {
         localStorage.setItem('token', data.token);
         alert('로그인 성공!');
-        onLogin();               // 로그인 상태 알려주기
-        navigate('/workspace');  // 워크스페이스 페이지로 이동
+        onLogin();
+        navigate('/workspace');
       } else {
         setError('로그인 실패: 토큰이 없습니다.');
       }
