@@ -13,6 +13,11 @@ const pool = mysql.createPool({
   queueLimit: 0,
 });
 
+async function getUserById(id) {
+  const [rows] = await pool.query('SELECT id, username, nickname, email FROM users WHERE id = ?', [id]);
+  return rows[0]; // 없으면 undefined
+}
+
 async function testConnection() {
   try {
     const connection = await pool.getConnection();
@@ -24,4 +29,7 @@ async function testConnection() {
 }
 
 testConnection();
-module.exports = pool;
+module.exports = {
+  pool,
+  getUserById,
+};

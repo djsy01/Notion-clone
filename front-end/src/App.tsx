@@ -1,8 +1,7 @@
-// src/App.tsx
-import React, { useState, useEffect } from 'react';
-import Router from './Router'; // 로그인 이후 라우터
-import AuthRoutes from './AuthRoutes'; // 로그인, 회원가입 라우트만 분리
+import { useState, useEffect } from 'react';
 import { BrowserRouter } from 'react-router-dom';
+import Router from './Router';
+import AuthRoutes from './AuthRoutes';
 
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -12,15 +11,21 @@ function App() {
     setIsAuthenticated(!!token);
   }, []);
 
+  const handleLogout = () => {
+    localStorage.removeItem('token');
+    setIsAuthenticated(false);
+  };
+
+  const handleLogin = () => {
+    setIsAuthenticated(true);
+  };
+
   return (
     <BrowserRouter>
       {isAuthenticated ? (
-        <Router onLogout={() => {
-          localStorage.removeItem('token');
-          setIsAuthenticated(false);
-        }} />
+        <Router onLogout={handleLogout} />
       ) : (
-        <AuthRoutes onLogin={() => setIsAuthenticated(true)} />
+        <AuthRoutes onLogin={handleLogin} />
       )}
     </BrowserRouter>
   );

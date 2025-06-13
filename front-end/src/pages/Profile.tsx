@@ -31,8 +31,7 @@ const Profile = () => {
   return (
     <div>
       <h2>프로필 정보</h2>
-      <p>아이디: {profile?.id}</p>
-      <p>사용자명: {profile?.username}</p>
+      <p>아이디: {profile?.username}</p>
       <p>이메일: {profile?.email}</p>
       <p>닉네임: {profile?.nickname}</p>
     </div>

@@ -1,5 +1,3 @@
-// src/Router.tsx
-import React from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
 import Workspace from './pages/Workspace';
 import Profile from './pages/Profile';
@@ -9,17 +7,15 @@ interface RouterProps {
   onLogout: () => void;
 }
 
-const Router: React.FC<RouterProps> = ({ onLogout }) => {
+const Router = ({ onLogout }: RouterProps) => {
   return (
-    <>
-      <Layout onLogout={onLogout} />
-      <Routes>
+    <Routes>
+      <Route element={<Layout onLogout={onLogout} />}>
         <Route path="/workspace" element={<Workspace />} />
-        <Route path='/profile' element={<Profile />} />
-        {/* 여기에 인증 후 접근 가능한 페이지 추가 */}
+        <Route path="/profile" element={<Profile />} />
         <Route path="*" element={<Navigate to="/workspace" replace />} />
-      </Routes>
-    </>
+      </Route>
+    </Routes>
   );
 };
 

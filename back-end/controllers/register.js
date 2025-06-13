@@ -1,5 +1,5 @@
 const bcrypt = require('bcrypt');
-const pool = require('../db/db');
+const { pool } = require('../db/db');
 
 module.exports = async (req, res) => {
   const { username, email, nickname, password } = req.body;
