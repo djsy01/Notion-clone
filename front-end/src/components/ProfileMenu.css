@@ -1,0 +1,35 @@
+.profile-menu {
+    position: relative;
+  }
+  
+  .profile-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+  }
+  
+  .dropdown {
+    position: absolute;
+    top: 36px;
+    right: 0;
+    background: white;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 8px;
+  
+    /* ✅ 고정된 넓이 추가 */
+    min-width: 140px;
+    padding: 6px 0;
+  }
+  
+  .dropdown-item {
+    padding: 10px 16px;
+    cursor: pointer;
+    white-space: nowrap; /* ✅ 줄바꿈 방지 */
+  }
+  
+  .dropdown-item:hover {
+    background: #f0f0f0;
+  }
+  

@@ -1,9 +1,5 @@
 import { atom } from 'recoil';
-
-export interface UserState {
-  username: string;
-  token: string;
-}
+import { UserState } from '../../../shared/types/user';
 
 export const userState = atom<UserState | null>({
   key: 'userState',

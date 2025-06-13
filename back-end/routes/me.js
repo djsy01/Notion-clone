@@ -17,7 +17,8 @@ router.get("/", authenticateToken, async (req, res) => {
     }
 
     res.json({
-      id: user.username,
+      id: user.id,
+      username: user.username,
       nickname: user.nickname,
       email: user.email,
     });

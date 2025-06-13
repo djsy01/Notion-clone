@@ -1,0 +1,45 @@
+.profile-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.2);
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding: 80px 40px;
+  z-index: 999;
+}
+
+.profile-modal {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  min-width: 260px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+  animation: fadeIn 0.2s ease;
+}
+
+.profile-modal h3 {
+  margin-bottom: 12px;
+}
+
+.profile-modal p {
+  margin: 6px 0;
+}
+
+.profile-modal button {
+  margin-top: 12px;
+  padding: 8px 12px;
+  border: none;
+  background: #f44336;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}

@@ -1,0 +1,38 @@
+.sidebar {
+    width: 240px;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-right: 1px solid #ddd;
+    display: flex;
+    flex-direction: column;
+  }
+  .sidebar-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 16px;
+  }
+  .sidebar-nav {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .sidebar-nav a {
+    color: #333;
+    text-decoration: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+  }
+  .sidebar-nav a.active {
+    background-color: #e1e4e8;
+    font-weight: bold;
+  }
+  .add-page-btn {
+    margin-top: auto;
+    padding: 8px 12px;
+    background-color: #d0d7de;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
