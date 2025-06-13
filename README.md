@@ -1,7 +1,7 @@
 # 노션 클론 프로젝트
 
 노션 클론 프로젝트는 React와 Recoil을 기반으로 기본 워크스페이스 및 페이지 CRUD 기능 구현을 목표로 하고 있습니다.  
-백엔드 서버는 Node.js와 Express로 REST API를 제공하며, SQLite로 데이터 저장을 담당합니다.
+백엔드 서버는 Node.js와 Express로 REST API를 제공하며, MySQL로 데이터 저장을 담당합니다.
 
 ---
 
