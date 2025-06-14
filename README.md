@@ -14,7 +14,8 @@
 ## 각 구성별 README
 
 - [Back-End (서버)](back-end/README.md) : Node.js 기반 REST API 서버 및 DB 관리
-- [Front-End (클라이언트)](front-end/README.md) : 현재 개발 중으로, 준비되는 대로 별도 README 추가 예정
+- [Front-End (클라이언트)](front-end/README.md) : Vite + React 기반 Typescript
+- [APP (어플리케이션)]() : 추후 React Nagative를 사용하여 앱 구현 예정
 
 ---
 
